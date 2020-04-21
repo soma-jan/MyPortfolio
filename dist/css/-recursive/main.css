@@ -89,42 +89,6 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.8s; }
 
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: left; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show,
-    div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 60vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px; }
-  .menu-branding {
-    height: 40vh;
-    transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      width: 150px;
-      height: 150px;
-      background: url(/dist/img/soma_small.jpg); } }
-
-@media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh;
-    text-align: left; }
-  .div.menu-branding {
-    margin-bottom: 0; }
-    .div.menu-branding.show {
-      margin: 0; } }
-
 * {
   box-sizing: border-box; }
 
@@ -179,7 +143,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%; }
+  min-height: calc(100vh-60px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -191,3 +155,80 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+
+.about-info {
+  display: grid;
+  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px; }
+
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 50%;
+  border: solid 3px #eece1a; }
+
+.bio {
+  grid-area: bio;
+  font-size: 1.5rem; }
+
+.job-1 {
+  grid-area: job1; }
+
+.job-2 {
+  grid-area: job2; }
+
+.job-3 {
+  grid-area: job3; }
+
+.job {
+  background: #515151;
+  padding: 0.5rem;
+  border-bottom: #eece1a solid 5px; }
+
+.main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2b2b2b;
+  color: set-color-text(#444);
+  height: 60px;
+  font-size: 1rem; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: left; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 60vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 40vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      width: 150px;
+      height: 150px;
+      background: url(/dist/img/soma_small.jpg); }
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh;
+    text-align: left; }
+  .div.menu-branding {
+    margin-bottom: 0; }
+    .div.menu-branding.show {
+      margin: 0; } }

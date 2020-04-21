@@ -37,6 +37,15 @@
       background: url(/dist/img/soma_small.jpg);
     }
   }
+  .about-info {
+    grid-template-areas:
+      'bioimage'
+      'bio'
+      'job1'
+      'job2'
+      'job3';
+    grid-template-columns: 1fr;
+  }
 }
 @include mediaSm {
   main#home h1 {
