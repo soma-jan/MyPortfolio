@@ -100,6 +100,43 @@ main {
   padding: 0.5rem;
   border-bottom: $secondary-color solid 5px;
 }
+//work page
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0.7rem;
+  img {
+    width: 100%;
+    border: white 3px solid;
+    &:hover {
+      opacity: 0.5px;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+//button styles
+.btn {
+  display: block;
+  padding: 0.5em 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+    //height: 60px;
+  }
+}
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
+}
 .main-footer {
   text-align: center;
   padding: 1rem;

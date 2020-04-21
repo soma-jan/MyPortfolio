@@ -1,6 +1,12 @@
 @include mediaXL {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 @include mediaLg {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 @include mediaMd {
   main {
@@ -46,6 +52,10 @@
       'job3';
     grid-template-columns: 1fr;
   }
+
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 @include mediaSm {
   main#home h1 {
@@ -57,5 +67,8 @@
     &.show {
       margin: 0;
     }
+  }
+  .projects {
+    grid-template-columns: 1fr;
   }
 }
